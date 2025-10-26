@@ -28,41 +28,41 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-6 max-w-7xl">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
+          {/* Logo - Centered on Mobile */}
+          <div className="flex items-center space-x-3 flex-shrink-0">
+            <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-teal-400 rounded-xl flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-xl md:text-2xl">C</span>
             </div>
-            <span className="text-white font-display font-bold text-2xl">
+            <span className="text-white font-display font-bold text-2xl md:text-3xl">
               CMOHAI
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Properly Spaced */}
+          <div className="hidden md:flex items-center space-x-10 lg:space-x-12">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors text-base lg:text-lg font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors text-base lg:text-lg font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('tools')}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors text-base lg:text-lg font-medium"
             >
               Tools
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 lg:px-8 py-2.5 lg:py-3 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all text-base lg:text-lg font-semibold"
             >
               Contact
             </button>
@@ -72,9 +72,10 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-white p-2"
+            aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -98,30 +99,30 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Properly Spaced */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
+          <div className="md:hidden mt-6 pb-6 space-y-5 animate-fade-in">
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('tools')}
-              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-3 text-lg font-medium"
             >
               Tools
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+              className="block w-full bg-gradient-to-r from-blue-600 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all text-lg font-semibold text-center"
             >
               Contact
             </button>
