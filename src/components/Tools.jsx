@@ -53,32 +53,34 @@ export default function Tools() {
   ];
 
   return (
-    <section id="tools" className="py-24 md:py-32 lg:py-40 bg-gray-900 w-full">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
+    <section id="tools" className="relative py-32 md:py-40 bg-black overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 grid-bg opacity-20"></div>
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-indigo-600/20 rounded-full filter blur-3xl"></div>
 
+      <div className="relative container mx-auto px-6 lg:px-12 max-w-7xl">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24 lg:mb-32">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 md:mb-8">
+        <div className="text-center mb-20 md:mb-28 reveal">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Tools We{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
-              Master
-            </span>
+            <span className="gradient-text">Master</span>
           </h2>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
             We leverage the best-in-class platforms and AI tools to build powerful automation systems
           </p>
         </div>
 
         {/* Tools Grid */}
-        <div className="mb-20 md:mb-28">
+        <div className="mb-24 md:mb-32 reveal" style={{ animationDelay: '0.2s' }}>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
               {tools.map((tool, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-10 transition-all duration-300 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 text-center"
+                  className="group glass rounded-2xl p-8 md:p-10 border border-white/10 card-hover text-center relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-teal-500/0 group-hover:from-blue-600/10 group-hover:to-teal-500/10 rounded-2xl transition-all duration-300"></div>
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/0 to-purple-600/0 group-hover:from-indigo-600/10 group-hover:to-purple-600/10 transition-all duration-500 rounded-2xl"></div>
 
                   <div className="relative z-10">
                     {/* Logo or Icon */}
@@ -95,7 +97,7 @@ export default function Tools() {
                     </div>
 
                     {/* Tool Name */}
-                    <h3 className="text-base md:text-lg font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-teal-400 group-hover:bg-clip-text transition-all duration-300">
+                    <h3 className="text-base md:text-lg font-bold text-white mb-2 group-hover:gradient-text transition-all duration-300">
                       {tool.name}
                     </h3>
 
@@ -111,15 +113,15 @@ export default function Tools() {
         </div>
 
         {/* Additional Info */}
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-900/20 to-teal-900/20 border border-blue-500/30 rounded-3xl p-10 md:p-12 lg:p-16 text-center">
+        <div className="max-w-5xl mx-auto reveal" style={{ animationDelay: '0.4s' }}>
+          <div className="glass rounded-3xl p-12 md:p-16 border border-indigo-500/30">
             <div className="flex flex-col md:flex-row items-center justify-center md:items-start md:text-left space-y-6 md:space-y-0 md:space-x-8">
               <div className="text-5xl md:text-6xl flex-shrink-0">🛠️</div>
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+              <div className="text-center md:text-left">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
                   Tailored Technology Stack
                 </h3>
-                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                   Every project is unique. We select and integrate the perfect combination of tools to match your specific needs, whether you need simple automation or complex multi-platform workflows.
                 </p>
               </div>
