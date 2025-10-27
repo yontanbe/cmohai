@@ -193,12 +193,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Smooth Reveal */
 .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.animate {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.active {
+.reveal.animate.active {
   opacity: 1;
   transform: translateY(0);
 }

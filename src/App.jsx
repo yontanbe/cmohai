@@ -9,32 +9,37 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    // Intersection Observer for reveal animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with the reveal class
+    // Add animate class to all reveal elements to prepare for animation
     const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
+    revealElements.forEach(el => el.classList.add('animate'));
 
-    // Cleanup
-    return () => {
-      revealElements.forEach(el => observer.unobserve(el));
-    };
+    // Small delay before starting intersection observer
+    const timer = setTimeout(() => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach(el => observer.observe(el));
+
+      return () => {
+        revealElements.forEach(el => observer.unobserve(el));
+      };
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-black w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
