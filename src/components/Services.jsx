@@ -43,15 +43,15 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-32 md:py-44 bg-gradient-to-b from-black via-indigo-950/20 to-black overflow-hidden">
+    <section id="services" className="relative py-44 md:py-52 bg-gradient-to-b from-black via-indigo-950/20 to-black overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 grid-bg opacity-20"></div>
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600/20 rounded-full filter blur-3xl"></div>
 
-      <div className="relative w-full px-6 lg:px-12">
-        {/* Section Header - STANDARDIZED */}
-        <div className="text-center mb-24 max-w-5xl mx-auto">
-          <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight">
+      <div className="relative w-full px-20">
+        {/* Section Header - AGGRESSIVE SPACING */}
+        <div className="text-center mb-32 max-w-6xl mx-auto">
+          <h2 className="font-display text-[5rem] md:text-[6rem] font-bold text-white mb-10 leading-[0.95] tracking-tight">
             Services That{' '}
             <span className="gradient-text">Scale</span>
           </h2>
@@ -60,22 +60,22 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid - STANDARDIZED */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {/* Services Grid - MODERN DESIGN WITH AGGRESSIVE SPACING */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group glass rounded-3xl p-8 border border-white/10 card-hover text-center relative overflow-hidden"
+              className="group backdrop-blur-md bg-white/5 rounded-2xl p-10 border border-white/10 hover:scale-[1.02] transition-transform duration-300 text-center relative overflow-hidden"
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/0 to-purple-600/0 group-hover:from-indigo-600/10 group-hover:to-purple-600/10 transition-all duration-500 rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/0 to-purple-600/0 group-hover:from-indigo-600/10 group-hover:to-purple-600/10 transition-all duration-500 rounded-2xl"></div>
 
               <div className="relative z-10">
-                {/* Icon */}
-                <div className="text-5xl mb-5">{service.icon}</div>
+                {/* Icon - SIZE INCREASED */}
+                <div className="text-[3.5rem] mb-6">{service.icon}</div>
 
-                {/* Title */}
-                <h3 className="font-display text-xl font-bold text-white mb-3">
+                {/* Title - PROPER SPACING */}
+                <h3 className="font-display text-2xl font-bold text-white mb-4">
                   {service.title}
                 </h3>
 

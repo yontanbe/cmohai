@@ -1,14 +1,14 @@
 export default function About() {
   return (
-    <section id="about" className="relative py-32 md:py-44 bg-black overflow-hidden">
+    <section id="about" className="relative py-44 md:py-52 bg-black overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 grid-bg opacity-20"></div>
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-600/20 rounded-full filter blur-3xl"></div>
 
-      <div className="relative w-full px-6 lg:px-12">
-        {/* Section Header - STANDARDIZED */}
-        <div className="text-center mb-24 max-w-5xl mx-auto">
-          <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight">
+      <div className="relative w-full px-20">
+        {/* Section Header - AGGRESSIVE SPACING */}
+        <div className="text-center mb-32 max-w-6xl mx-auto">
+          <h2 className="font-display text-[5rem] md:text-[6rem] font-bold text-white mb-10 leading-[0.95] tracking-tight">
             We Help Brands Lead —{' '}
             <span className="gradient-text">Not Follow</span>
           </h2>
@@ -17,10 +17,10 @@ export default function About() {
           </p>
         </div>
 
-        {/* Main Content - STANDARDIZED */}
-        <div className="mb-28 max-w-4xl mx-auto">
-          <div className="glass rounded-3xl p-14 md:p-16 border border-white/10 text-center">
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
+        {/* Main Content - MODERN DESIGN */}
+        <div className="mb-40 max-w-5xl mx-auto">
+          <div className="backdrop-blur-md bg-white/5 rounded-2xl p-16 md:p-20 border border-white/10 text-center">
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-10">
               <strong className="text-white font-semibold">CMOHAI</strong> helps marketing teams modernize workflows using AI. We bring together marketing strategy, AI technology, and automation to accelerate lead generation, streamline operations, and scale creative output.
             </p>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
@@ -31,13 +31,13 @@ export default function About() {
           </div>
         </div>
 
-        {/* Feature Cards - STANDARDIZED */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-6xl mx-auto">
-          <div className="group glass rounded-3xl p-10 border border-white/10 card-hover text-center">
-            <div className="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
+        {/* Feature Cards - MODERN SPACING */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32 max-w-6xl mx-auto">
+          <div className="group backdrop-blur-md bg-white/5 rounded-2xl p-12 border border-white/10 hover:scale-[1.02] transition-transform duration-300 text-center">
+            <div className="w-16 h-16 mx-auto mb-8 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
               🎯
             </div>
-            <h3 className="font-display text-2xl font-bold text-white mb-4">
+            <h3 className="font-display text-2xl font-bold text-white mb-5">
               Strategy + Implementation
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -45,11 +45,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group glass rounded-3xl p-10 border border-white/10 card-hover text-center">
-            <div className="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
+          <div className="group backdrop-blur-md bg-white/5 rounded-2xl p-12 border border-white/10 hover:scale-[1.02] transition-transform duration-300 text-center">
+            <div className="w-16 h-16 mx-auto mb-8 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
               🌍
             </div>
-            <h3 className="font-display text-2xl font-bold text-white mb-4">
+            <h3 className="font-display text-2xl font-bold text-white mb-5">
               Global Service
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -57,11 +57,11 @@ export default function About() {
             </p>
           </div>
 
-          <div className="group glass rounded-3xl p-10 border border-white/10 card-hover text-center">
-            <div className="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
+          <div className="group backdrop-blur-md bg-white/5 rounded-2xl p-12 border border-white/10 hover:scale-[1.02] transition-transform duration-300 text-center">
+            <div className="w-16 h-16 mx-auto mb-8 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-300">
               🤖
             </div>
-            <h3 className="font-display text-2xl font-bold text-white mb-4">
+            <h3 className="font-display text-2xl font-bold text-white mb-5">
               AI-Powered Marketing
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -70,9 +70,9 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mission Statement - STANDARDIZED */}
+        {/* Mission Statement - MODERN DESIGN */}
         <div className="text-center">
-          <div className="inline-block glass border border-indigo-500/30 rounded-full px-12 py-6 mx-auto">
+          <div className="inline-block backdrop-blur-md bg-white/5 border border-indigo-500/30 rounded-2xl px-16 py-8 mx-auto">
             <p className="text-xl text-gray-300">
               <span className="font-semibold text-white">Our Mission:</span>{' '}
               <span className="gradient-text font-medium">Empower teams to lead with AI-driven innovation</span>
